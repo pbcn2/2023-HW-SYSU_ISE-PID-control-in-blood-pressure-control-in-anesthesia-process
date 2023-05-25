@@ -1,6 +1,6 @@
 function PI(Kp_s,Ki_s,Kd_s,t,gp,g,H)
 
-num = 50;
+num = 10;
 r = zeros(size(t));  % 初始化为全零
 r(t > 10 & t <= 11) = r(t > 10 & t <= 11) + (max(0, min((t(t > 10 & t <= 11) - 10), 1)) * num);
 r(t > 11) = num;
@@ -29,8 +29,29 @@ for i = 1:5
     output_n = lsim(fai_n, noise, t);   % 对应fai_n的输出
     output = output_r + output_Td + output_n; % 得到总输出  
 
+    % 计算超调量
+    overshoot = max(0, output - 10);  % 假设最终稳定值为10
+    % 计算超调量变化比例
+    overshoot_ratio = overshoot ./ 10;  % 假设最终稳定值为10
+    % 找到最大超调量变化比例及其对应的时间
+    [max_overshoot_ratio, idx] = max(overshoot_ratio);
+    max_overshoot_ratio_time = t(idx);
+
+    % 计算调节时间
+    final_value = 10;  % 假设最终稳定值为10
+    settling_index = find(output >= 0.98 * final_value & output <= final_value, 1, 'first');
+    settling_time = t(settling_index) - 10;  
+
     subplot(5,1,i)
     plot(t, output);  % 画出时域图像
+    hold on;
+    % 添加超调量标记
+    text(max_overshoot_ratio_time, output(idx)-0.5, sprintf('Overshoot: %.2f%%', max_overshoot_ratio*100), 'VerticalAlignment','top', 'HorizontalAlignment','left');
+    % 添加调节时间标记
+    line([settling_time + 10, settling_time + 10], ylim, 'Color', 'red', 'LineStyle', '--');
+    text(settling_time + 10, output(settling_index)-0.5, sprintf('t_s = %.2f', settling_time), 'VerticalAlignment','top', 'HorizontalAlignment','right');
+    hold off;
+
     title(['Response for PI Controller with Kp=',num2str(Kp) ,'  Ki=', num2str(Ki)])
     xlabel('Time (s)')
     ylabel('Response')
@@ -56,8 +77,29 @@ for i = 1:5
     output_n = lsim(fai_n, noise, t);   % 对应fai_n的输出
     output = output_r + output_Td + output_n; % 得到总输出  
 
+    % 计算超调量
+    overshoot = max(0, output - 10);  % 假设最终稳定值为10
+    % 计算超调量变化比例
+    overshoot_ratio = overshoot ./ 10;  % 假设最终稳定值为10
+    % 找到最大超调量变化比例及其对应的时间
+    [max_overshoot_ratio, idx] = max(overshoot_ratio);
+    max_overshoot_ratio_time = t(idx);
+
+    % 计算调节时间
+    final_value = 10;  % 假设最终稳定值为10
+    settling_index = find(output >= 0.98 * final_value & output <= final_value, 1, 'first');
+    settling_time = t(settling_index) - 10;  
+
     subplot(5,1,i)
     plot(t, output);  % 画出时域图像
+    hold on;
+    % 添加超调量标记
+    text(max_overshoot_ratio_time, output(idx)-0.5, sprintf('Overshoot: %.2f%%', max_overshoot_ratio*100), 'VerticalAlignment','top', 'HorizontalAlignment','left');
+    % 添加调节时间标记
+    line([settling_time + 10, settling_time + 10], ylim, 'Color', 'red', 'LineStyle', '--');
+    text(settling_time + 10, output(settling_index)-0.5, sprintf('t_s = %.2f', settling_time), 'VerticalAlignment','top', 'HorizontalAlignment','right');
+    hold off;
+
     title(['Response for PI Controller with Kp=',num2str(Kp) ,'  Ki=', num2str(Ki)])
     xlabel('Time (s)')
     ylabel('Response')

@@ -1,6 +1,7 @@
 %!xelatex = 'xelatex --halt-on-error %O %S'
 
 \documentclass{thuemp}
+\usepackage{url}
 \usepackage{lipsum}  % 生产假书乱文的包，实际使用时可去掉
 \begin{document}
 
@@ -86,7 +87,7 @@ PID控制器将比例、积分和微分控制相结合，通过对误差的不�
 \subsection{系统设计流程图}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/from_internet/PID.png}
+\includegraphics[width=1\linewidth]{./img/from_internet/PID.png}
 \end{figure}
 
 \subsection{系统参数介绍}
@@ -112,13 +113,12 @@ PID控制器的三个参数分别为：
 \subsection{系统设计流程图}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/work_stream.jpg}
+\includegraphics[width=1\linewidth]{./img/work_stream.jpg}
 \end{figure}
-
 
 \subsection{控制目标与实验要求}
 
-麻醉过程中的血压控制系统控制目标：
+\subsubsection{麻醉过程中的血压控制系统控制目标}
 \begin{itemize}
 	\item 控制对象: 需麻醉的患者
 	\item 控制任务: 将患者 MAP 调节到任意预期设定的水平，并在存在干扰信号的情况下将 MAP维持在预期设定的水平。
@@ -129,7 +129,7 @@ PID控制器的三个参数分别为：
 	\item 系统输出: 实际的 MAP 量
 \end{itemize}
 
-该控制系统的实验设计要求：
+\subsubsection{该控制系统的实验设计要求}
 \begin{enumerate}
 	\item 取N(s)=0, Td(s)=0
 	
@@ -174,23 +174,23 @@ $$ G_{p\left(s\right)}=\frac{U(s)}{V(s)}=\frac{1}{s} $$
 
 \subsection{传递函数设计与解析}
 
-通过对信号方框图的分析，我将R & Td & N 分别作为输入，重绘信号方框图
+通过对信号方框图的分析，我将$R \& Td \& N$分别作为输入，重绘信号方框图
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/Rs.png}
+\includegraphics[width=1\linewidth]{./img/Rs.png}
 \caption{$Rs(s)$作为输入} 
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/Td.png}
+\includegraphics[width=1\linewidth]{./img/Td.png}
 \caption{$Td(s)$作为输入} 
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/N.jpg}
+\includegraphics[width=1\linewidth]{./img/N.jpg}
 \caption{$N(s)$作为输入} 
 \end{figure}
 
@@ -213,127 +213,344 @@ $$
 $$
 G_c\left(s\right)=\frac{K_ds^2+K_ps+K_i}{s}
 $$
-% ========================================================================================
-% ========================================================================================
 
+\subsection{仿真细节与结果展示}
+% ==================================================================
+\subsubsection{原系统}
+取N(s)=0, Td(s)=0, R(s)=10/s
 
-\subsection{二级标题}
-正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容。
+可以看到先对未加入 pid 控制器的系统进行响应分析，通过 matlab 运行程序，作图，得到原系统的阶跃输入
 
-\section{实验结果与分析}
-一般先给出实验条件、现象和实验结果，然后用学过的物理理论结合实验条件做出合理的分析和解释。
-
-实验数据及处理结果在报告中以图或表形式给出，并对图、表所反映的现象或物理规律做出具体说明和解释。图、表格式规范，大小适中。
-
-分析讨论影响实验结果的因素，改进方法等
-
-\subsection{往届学生报告中常见问题与不足}
-正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容。
-\subsubsection{三级标题}
-\subsubsection{只给数据和结果，没有对结果所反映的物理规律做理论分析及数据误差分析；}
-\subsubsection{数据及结果直接给出，没有必要的实验条件说明和所用物理计算公式；}
-\subsubsection{结果以图、表给出时，图、表不规范（缺少坐标分度、物理量及其单位等）；}
-正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容正文文字五号宋体正文内容。
-\subsection{报告中公式、字母的规范写法}
-公式全文统一编号，如公式为
-\begin{equation}\label{EQ1}
-\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}=0
-\end{equation}
-式中，$u$是××××（单位）；$v$是×××（单位）；$w$是××（单位）。
-
-对于公式，应全文统一连续编号，如式\eqref{EQ1}……一般情况下，需要引用的或重要的公式才编号。在文中引用时，用“式（编号）”表示。
-后文不再提及的，可以不编号。如
-\begin{equation*}
-1 + 1 + 3 = 5
-\end{equation*}
-
-对于公式中首次出现的量的符号，按照其在式中出现的顺序，用准确、简洁的语句对其进行逐一解释。公式中变量应尽量避免复合上下角标的使用；尽量少用3层关系的上下标，同时应尽量减少不必要的公式推导。
-
-\subsection{报告中图的规范要求}
-插图全文顺序编号。插图内容应与正文内容密切结合，每幅图前都应有相应的引出或介绍文字。图形应保证线条清晰，图形大小应适应版面要求，合理布局，图内如有标注或说明性文字时应清晰可辨。图中除了物理量符号及单位外一律用中文，同一图中的不同曲线应用不同线型表示。插图分辨率要大于600PPI。
-
-正文文字中先见文，后见图，图号全文统一按顺序编号，如图\ref{fig:eg}所示。图中文字为6号,图线必须清晰可辨坐标轴的物理量和单位不可缺。
-
-
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=0.8\linewidth]{./image/example.jpg}
-% \caption{图片示例} \label{fig:eg}
-% \end{figure}
-
-
-\subsection{报告中表的规范}
-推荐使用标准“三线表”（如表\ref{tab:eg1}所示。），内容易混淆时可加辅助线进行辅助说明。按表格在文中出现的顺序，用阿拉伯数字对其进行编号，全文顺序编号。应有相应的表题且每个表格前都应有相应的引出或介绍文字。
-
-图、表应在文中有相应表述，即图、表的号应在文中引出，以先见文后见图、表为原则。每个图、表都必须有图名、表名，并且有编号。图号、表号应全文统一连续排列，即，应按照图1、图2……排列不应按小结编号。图片中的文字、线条应当清晰可辨，图片像素（DPI）在300以上。
-表格推荐采用全线表，表头中使用量符号/量单位形式。如表\ref{tab:eg2}所示。
-
-\begin{table}[h]
+当到达绿线时，系统给予了一个$R(s)=10/s$的阶跃输入，可以看到几乎没有超调量，到达红线时
+输出进入5\%的误差带，调节时间$t_s = 12$
+\begin{figure}[H]
 \centering
-\captionnamefont{\wuhao\bf\heiti}
-\captiontitlefont{\wuhao\bf\heiti}
-\caption{三线表示例} \label{tab:eg1}
-\liuhao
-\begin{tabular}{cccc}
-\toprule
-{编号} &  {直径}/\si{\metre} & {静温}/\si{\kelvin} & {时间}/min\\
-\midrule 
-4 & 0.0349 & 268.15 & 30\\
-5 & 0.01905 & 268.15 & 30\\
-\bottomrule
-\end{tabular}
+\includegraphics[width=1\linewidth]{./img/None_p1_R.png}
+\end{figure}
+
+取N(s)=0, Td(s)=50/s, R(s)=10/s
+
+测试系统在阶跃扰动的情况下的性能，在t=0的时候给予一个R(s) = 10/s的输入，
+在t=50的时候给予一个Td(s) = 50/s的阶跃扰动，观察超调量，作图如下
+
+超调量过大
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/None_p2_Td.png}
+\end{figure}
+
+% ==========================================================================================
+\subsubsection{PI控制器}
+参数：R = 10 (t>10);  N(s) = 0;  Td(s) = 0;
+
+在这个模块中，将PI控制器接入了系统的Gc(s)的位置
+
+实现了对两个参数 (Kp \& Ki) 进行了两组分析
+\begin{enumerate}
+  \item 保持Ki不变，调整Kp的值————以0.8为步长，在[0.8,4]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/i1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/i2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/i3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/i4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/i5.png}
+  \end{figure}
+
+  \item 保持Kp不变，调整Ki的值————以0.15为步长，在[0.15,0.75]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/p1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/p2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/p3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/p4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PI/p5.png}
+  \end{figure}
+
+\end{enumerate}
+
+% =======================================================================================
+\subsubsection{PD控制器}
+参数：R = 10 (t>10);  N(s) = 0;  Td(s) = 0;
+
+在这个模块中，将PD控制器接入了系统的Gc(s)的位置
+
+实现了对两个参数 (Kp \& Kd) 进行了两组分析
+\begin{enumerate}
+  \item 保持Kp不变，调整Kd的值————以1为步长，在[1,5]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/p1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/p2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/p3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/p4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/p5.png}
+  \end{figure}
+
+  \item 保持Kd不变，调整Kp的值————以2为步长，在[2,10]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/d1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/d2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/d3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/d4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PD/d5.png}
+  \end{figure}
+
+\end{enumerate}
+
+% =======================================================================================
+\subsubsection{PID控制器}
+参数：R = 10 (t>10);  N(s) = 0;  Td(s) = 0;
+
+在这个模块中，将PiD控制器接入了系统的Gc(s)的位置
+
+实现了对三个参数 (Kp \& Ki \& Kd) 进行了两组分析
+\begin{enumerate}
+  \item 保持Kp \& Ki不变，调整Kd的值————以0.8为步长，在[0.8,4]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pi1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pi2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pi3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pi4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pi5.png}
+  \end{figure}
+
+  \item 保持Kp \& Kd不变，调整Ki的值————以0.15为步长，在[0.15,0.75]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pd1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pd2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pd3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pd4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/pd5.png}
+  \end{figure}
+
+\item 保持Ki \& Kd不变，调整Kp的值————以0.6为步长，在[0.6,3]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/id1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/id2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/id3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/id4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID/id5.png}
+  \end{figure}
+
+\end{enumerate}
+
+% ====================================================
+\subsubsection{阶跃扰动响应下的PID控制器}
+参数：R = 10 (t>10);  N(s) = 0;  Td(s) = 50/s (t>50);
+
+在这个模块中，将PID控制器接入了系统的Gc(s)的位置
+
+在t = 0的时候系统对R阶跃信号产生响应，当趋于稳定以后，对系统添加一个Td(s) = 50/s的阶跃扰动响应信号
+观察系统的变化，同时与没有接入PID控制器的信号进行对比
+
+实现了对三个参数 (Kp \& Ki \& Kd) 进行了两组分析
+\begin{enumerate}
+  \item 保持Kp \& Ki不变，调整Kd的值————以0.8为步长，在[0.8,4]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pi1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pi2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pi3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pi4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pi5.png}
+  \end{figure}
+
+  \item 保持Kp \& Kd不变，调整Ki的值————以0.15为步长，在[0.15,0.75]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pd1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pd2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pd3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pd4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/pd5.png}
+  \end{figure}
+
+\item 保持Ki \& Kd不变，调整Kp的值————以0.6为步长，在[0.6,3]的范围内生成5张系统时域图
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/id1.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/id2.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/id3.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/id4.png}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./img/PID_with_noise/id5.png}
+  \end{figure}
+
+\end{enumerate}
+
+没有PID控制器的原系统响应为
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/None_p2_Td.png}
+\end{figure}
+可以看到，当加入了PID系统以后，整体的超调量有了明显的下降，
+这体现了通过加入PID控制器以后，系统的稳定性大大提高了。
+这对于手术过程中的病人麻醉状态的稳定有着至关重要的作用。
+
+
+\section{实验分析与结论}
+\subsection{结论}
+利用控制变量法及相关资料，我在
+PI/PD/PID 三种控制器的有无扰动两种情况下最
+终人工调整三个参数获得以下结论:
+
+\begin{table}[!ht]
+  \centering
+  \captionnamefont{\wuhao\bf\heiti}
+  \captiontitlefont{\wuhao\bf\heiti}
+  \caption{PID参数对系统的影响} 
+  \begin{tabular}{llllll}
+      \toprule
+      调整方式 & 上升时间 & 超调量 & 稳态误差 & 稳定性 \\ 
+      \midrule
+      ↑ Kp & ↓ 减少 & ↑ 增加 & ↓ 减少 & ↓ 变差 \\ 
+      ↑ Ki & ↓ 小幅减少 & ↑ 增加 & ↓ 大幅减少 & ↓ 变差 \\ 
+      ↑ Kd & ↓ 小幅减少 & ↓ 减少 & → 变动不大 & ↑ 变好 \\
+      \bottomrule
+  \end{tabular}
 \end{table}
 
-\begin{table}[h]
-\centering
-\captionnamefont{\wuhao\bf\heiti}
-\captiontitlefont{\wuhao\bf\heiti}
-\caption{全线表示例} \label{tab:eg2}
-\liuhao
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-U/V & I/mA & v/km·h$^{-1}$ & x/mm & p/MPa \\ \hline
-\textit{12} & \textit{30} & \textit{80} & \textit{55} & \textit{110} \\ \hline
-\textit{24} & \textit{34} & \textit{90} & \textit{60} & \textit{111} \\ \hline
-\end{tabular}
-\end{table}
+\subsection{最优参数}
+人工调整有一种作法是先将 Ki 及 Kd 设为零，
+增加 Kp 一直到回路输出震荡为止，之后再将 Kp
+设定为“1/4 振幅衰减” (使系统第二次过冲量是第
+一次的 1/4 ) 增益的一半，然后增加 Ki 直到一定
+时间后的稳态误差可被修正为止。不过若 Ki 可能
+会造成不稳定，最后若有需要，可以增加 Kd ，并
+确认在负载变动后回路可以够快的回到其设定值，
+不过若 Kd 太会造成响应太快及过冲。一般而言快
+速反应的 PID 应该会有轻微的过冲，只是有些系
+统不允许过冲。因此需要将回授系统调整为过阻
+尼系统，而 Kp 比造成震荡 Kp 的一半还要小很多。\cite{PID}
 
-\subsection{报告中英文缩略语的规范}
-文中的英文缩略语应在首次出现时给出中文含义以及英文全称后再使用。例如，全球定位系统(Global Positioning System，GPS)。
-
-
-\subsection{外文字母}
-\subsubsection{斜体外文字母用于表示量的符号，主要用于下列场合}
-
-\begin{enumerate}
-\renewcommand{\labelenumi}{(\theenumi)}
-\item 变量符号、变动附标及函数。
-\item 用字母表示的数及代表点、线、面、体和图形的字母。
-\item 特征数符号，如Re (雷诺数)、Fo (傅里叶数)、Al (阿尔芬数)等。
-\item 在特定场合中视为常数的参数。
-\end{enumerate} 
-
-\subsubsection{正体外文字母用于表示名称及与其有关的代号，主要用于下列场合}
-\begin{enumerate}
-\renewcommand{\labelenumi}{(\theenumi)}
-\item 有定义的已知函数（例如$\sin$, $\exp$, $\ln$等)。
-\item 其值不变的数学常数（例如$\mathrm{e} = 2.718 281 8\cdots)$及已定义的算子。
-\item 法定计量单位、词头和量纲符号。
-\item 数学符号。
-\item 化学元素符号。
-\item 机具、仪器、设备和产品等的型号、代号及材料牌号。
-\item 硬度符号。
-\item 不表示量的外文缩写字。
-\item 表示序号的拉丁字母。
-\item 量符号中为区别其他量而加的具有特定含义的非量符号下角标。
-\end{enumerate} 
-
-\section{结~~论}
-用准确、精炼的语言归纳总结使用的方法以及研究结果。
-
-说明研究的创新价值和应用价值，包括对科技工作者的研究的价值和对产业发展的价值。
-
-可说明自己做本实验的总结、收获和体会，对实验中发现的问题提出自己的建议。
+当然历史上 PID 的参数调试还有很多，例如
+齐格勒-尼克尔斯方法等，大部分现代的工业设备
+也实现了 PID 自动调试及最佳化软件。
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,6 +575,7 @@ U/V & I/mA & v/km·h$^{-1}$ & x/mm & p/MPa \\ \hline
 \bibliographystyle{gbt7714-numerical}
 \bibliography{./TempExample}
 }
+
 
 
 \end{document}

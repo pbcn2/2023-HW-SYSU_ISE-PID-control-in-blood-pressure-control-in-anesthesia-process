@@ -203,7 +203,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 {
 \centering
 \textbf{\wuhao #1 ， #2} \\
-\liuhao Department of Physics, Tsinghua University, Beijing 100084, China\ 
+\liuhao School of Intelligent Engineering, Sun Yat-sen University, Shenzhen 518000, China\ 
 }
 \end{center}
 }
@@ -218,7 +218,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \parbox{\textwidth}{
 \heiti\makebox[\widthof{\makebox{*}实}][r]{实}验时间: #1\\
 \heiti\makebox[\widthof{\makebox{*}实}][r]{报}告时间: #2\\
-\heiti\makebox[\widthof{\makebox{*}实}][r]{$\dagger$指}导教师\\
+\heiti\makebox[\widthof{\makebox{*}实}][r]{$\dagger$指}导教师：李中华\\
 \heiti\makebox[\widthof{\makebox{*}实}][r]{\makebox{*}学}号：#3 \\
 \heiti\makebox[\widthof{\makebox{*}实}][r]{\makebox{*}E-}mail：#4 \\
 }}
@@ -229,7 +229,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fancypagestyle{plain}{ \fancyhf{}\vspace{10pt}
 \lhead{}
-\chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao 中\ 山\ 大\ 学\ 自\ 动\ 控\ 制\ 原\ 理}\\[-0.5ex]
+\chead{\vspace{0.6cm}\centering{{\heiti\Large 中\ 山\ 大\ 学\ 自\ 动\ 控\ 制\ 原\ 理}\\[-0.5ex]
 {{\xiaowuhao Principle of Automatic Control, Sun Yat-sen University}}}}
 \rhead{}
 \lfoot{}
