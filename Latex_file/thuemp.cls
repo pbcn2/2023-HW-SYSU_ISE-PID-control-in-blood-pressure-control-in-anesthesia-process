@@ -184,7 +184,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \newcommand\empauthor[2]{
 \author{
 \sihao\kaishu #1\makebox{$^{\text{*}}$} ， #2\makebox{{$^\dagger$}} \\[0.1cm]
-\liuhao \kaishu ~~清华大学~~物理系，北京~~100084\ 
+\liuhao \kaishu ~~中山大学~~智能工程学院，深圳~~518000\ 
 }
 }
 
@@ -229,8 +229,8 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fancypagestyle{plain}{ \fancyhf{}\vspace{10pt}
 \lhead{}
-\chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao 清\ 华\ 大\ 学\ 近\ 代\ 物\ 理\ 实\ 验}\\[-0.5ex]
-{{\xiaowuhao Experiments in Modern Physics, Tsinghua University}}}}
+\chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao 中\ 山\ 大\ 学\ 自\ 动\ 控\ 制\ 原\ 理}\\[-0.5ex]
+{{\xiaowuhao Principle of Automatic Control, Sun Yat-sen University}}}}
 \rhead{}
 \lfoot{}
 \cfoot{}
@@ -241,7 +241,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy} 
 \fancyhf{}
-\fancyhead[CE]{{\footnotesize 清华大学近代物理实验}}
+\fancyhead[CE]{{\footnotesize 中山大学自动控制原理}}
 \fancyhead[LE,RO]{~~~\footnotesize\thepage ~~~}
 \lfoot{}
 \cfoot{}

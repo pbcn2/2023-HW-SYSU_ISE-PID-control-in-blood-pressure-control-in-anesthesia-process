@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.22)  22 MAY 2023 16:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.22)  23 MAY 2023 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,7 +1052,8 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count390
  (d:/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 5.
- (./TempExample.aux)
+
+No file TempExample.aux.
 \openout1 = `TempExample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1075,7 +1076,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
- (d:/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+(d:/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 5.
@@ -1248,10 +1249,12 @@ LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 5.
 Package hyperref Info: Link coloring OFF on input line 5.
- (./TempExample.out) (./TempExample.out)
 \@outlinefile=\write4
 \openout4 = `TempExample.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1413,18 +1416,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 51.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.80072pt on input line 51.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 4.20044pt on input line 51.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 51.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.79927pt on input line 51.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.19954pt on input line 51.
+
+
+LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
+(Font)              using `TU/SimHei(0)/m/n' instead on input line 68.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1442,32 +1438,82 @@ Package fancyhdr Warning: \headheight is too small (28.45274pt):
 
 
 ]
-
-LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 66.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+File: ./img/work_stream.jpg Graphic file (type bmp)
+<./img/work_stream.jpg>
  [2]
-File: ./image/example.jpg Graphic file (type bmp)
-<./image/example.jpg>
- (./TempExample.bbl [3]) [4
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 157.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.80072pt on input line 157.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 4.20044pt on input line 157.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 157.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.79927pt on input line 157.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.19954pt on input line 157.
+
+Missing character: There is no 和 (U+548C) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 分 (U+5206) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 别 (U+522B) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 表 (U+8868) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 示 (U+793A) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 蒸 (U+84B8) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 发 (U+53D1) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 泵 (U+6CF5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 的 (U+7684) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 输 (U+8F93) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 入 (U+5165) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 与 (U+4E0E) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 输 (U+8F93) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+Missing character: There is no 出 (U+51FA) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
+
+LaTeX Warning: Reference `EQ1' on page 3 undefined on input line 198.
+
+[3]
+
+LaTeX Warning: Reference `fig:eg' on page 4 undefined on input line 209.
+
+
+LaTeX Warning: Reference `tab:eg1' on page 4 undefined on input line 220.
+
+
+LaTeX Warning: Reference `tab:eg2' on page 4 undefined on input line 223.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] (./TempExample.bbl) [5
 
 ] (./TempExample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `TempExample.out' has not changed.
-(rerunfilecheck)             Checksum: 0BCCFD3AC5FFEB66355D641C616CBB71;2959.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `TempExample.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TempExample.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  9D4C8E2BE42121EDE3880201673D9BC0;3490.
  ) 
 Here is how much of TeX's memory you used:
- 38792 strings out of 476683
- 840600 string characters out of 5807575
- 1881012 words of memory out of 5000000
- 58318 multiletter control sequences out of 15000+600000
- 547060 words of font info for 255 fonts, out of 8000000 for 9000
+ 38759 strings out of 476683
+ 839683 string characters out of 5807575
+ 1882012 words of memory out of 5000000
+ 58294 multiletter control sequences out of 15000+600000
+ 547036 words of font info for 252 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,14n,115p,1277b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,14n,115p,1277b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TempExample.pdf (4 pages).
+Output written on TempExample.pdf (5 pages).
