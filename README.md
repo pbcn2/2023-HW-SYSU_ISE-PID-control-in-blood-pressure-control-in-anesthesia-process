@@ -36,3 +36,5 @@ If you wish to reference or modify the code in this repository, you are required
 Thank you for your understanding and respect. Let's work together to maintain the healthy development of the open-source community.
 
 :warning: :warning: :warning:
+
+Contact me if you need more help： [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sumyggsun@gmail.com)](mailto:pbcn2secure@gmail.com)
