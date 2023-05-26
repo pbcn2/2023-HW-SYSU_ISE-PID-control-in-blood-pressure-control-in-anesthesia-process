@@ -3,6 +3,7 @@
 \documentclass{thuemp}
 \usepackage{url}
 \usepackage{lipsum}  % 生产假书乱文的包，实际使用时可去掉
+\usepackage{hyperref}
 \begin{document}
 
 % 标题，作者
@@ -29,7 +30,7 @@
 %%%%%%%%英文标题、作者、摘要、关键词
 \emptitleEn{Application of PID control in blood pressure control in medical anesthesia process}
 \empauthorEn{Huaqian Chin}{Prof. Li Zhonghua}
-\KeywordEn{PID control, anaesthetization, blood pressure control}
+\KeywordEn{PID control, Anaesthetization, Blood Pressure Pontrol}
 
 \begin{empAbstractEn}
 This article has developed a system based on the PID control system, aimed at automatically measuring and controlling various vital parameters to maintain them within an appropriate range. The goal is to enhance the safety of anesthesiologists during surgery. To further optimize system performance, we conducted a dedicated study, investigating the impact of different parameters in the PID system on system response by adjusting the kp, ki, and kd parameters. The system achieves automatic adjustment of anesthetic depth to minimize fluctuations and impact responses. Experimental results show that after introducing the designed controller, the overshoot of the blood pressure control system for a given input signal decreases, and the adjustment time shortens. The steady-state error under step input signals is zero, and under step disturbance input signals, it can maintain the steady-state error within a certain range, ultimately achieving a steady-state output of zero.
@@ -552,6 +553,37 @@ PI/PD/PID 三种控制器的有无扰动两种情况下最
 齐格勒-尼克尔斯方法等，大部分现代的工业设备
 也实现了 PID 自动调试及最佳化软件。
 
+\section*{写在最后}
+在完成自动控制原理课程作业的这个过程中，我体验到了丰富而深刻的学习过程，
+由衷地感谢所有帮助我、支持我的人。
+
+首先，我要感谢李中华老师，您的热情教课和专业引导使我对PID控制和信号流图有了深入的理解和掌握。
+每次课堂上的讲解都是精心准备的，它们如照亮黑夜的明灯，
+指引我探索控制理论的广阔领域。您给予我们的这次作业机会，
+是我进一步理解自动控制原理的一个宝贵的实践场所。我深深地感谢您的悉心教诲，
+也感谢您给我提供了这样一个展现所学知识的机会。
+
+我也要特别感谢方桂安学长。虽然去年的作业要求与今年的不同，
+但学长去年在博客上分享的报告对我产生了深远的影响。在您的报告中，
+我看到了深入浅出的解析和清晰的逻辑思维。您的报告让我深受启发，
+也使我对PID控制和信号流图的学习有了更深的认识和理解。我把您的博客网址和引用都标在了文末，
+以表达我对您贡献的尊重和感谢。
+
+回顾完成这份作业的整个过程，我深感欣喜。通过这次实践，我得以将所学的理论知识与实际操作相结合，
+实现了知识与实践的完美结合。我深深感受到自动控制原理的独特魅力和应用价值。
+
+本着开源精神，我也将本次作业的MATLAB代码和完成报告所用的\LaTeX 源文件全部托管在了GitHub仓库中，
+以便老师和同学们进行浏览和学习。这不仅是我对自己工作的一种展示，
+也是希望能通过大家的交流和互动，一起探索学习，一起进步。
+
+我诚挚地邀请每一位对此感兴趣的老师和同学，前往我的GitHub仓库查阅代码，
+提出您的宝贵建议和批评。任何形式的反馈和建议，无论是关于代码的优化，
+还是对于实验方法和结果的讨论，我都将热烈欢迎。通过大家的共同努力，
+我们可以一起推进学术的发展，也可以一起提升我们自己。
+
+GitHub repository URL: 
+
+\href{https://github.com/pbcn2/PID-control-in-blood-pressure-control-in-anesthesia-process}{https://github.com/pbcn2/PID-control-in-blood-pressure-control-in-anesthesia-process}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  参考文献
