@@ -11,6 +11,13 @@ main.m
 ```matlab
 clc;clear;close all;
 
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
+
 %% 初始默认参数
 Kp_s = 2.8;
 Ki_s = 0.15;
@@ -95,6 +102,14 @@ row.m
 
 ```matlab
 function row(Kp_s,Ki_s,Kd_s,t,gp,g,H)
+
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
+
 num = 10;
 r = zeros(size(t));  % 初始化为全零
 r(t > 10 & t <= 11) = r(t > 10 & t <= 11) + (max(0, min((t(t > 10 & t <= 11) - 10), 1)) * num);
@@ -188,6 +203,13 @@ PD.m
 
 ```matlab
 function PD(Kp_s,Ki_s,Kd_s,t,gp,g,H)
+
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
 
 % N(s) = 0;  Td(s) = 0;
 num = 10;
@@ -309,6 +331,13 @@ PI.m
 ```matlab
 function PI(Kp_s,Ki_s,Kd_s,t,gp,g,H)
 
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
+
 num = 10;
 r = zeros(size(t));  % 初始化为全零
 r(t > 10 & t <= 11) = r(t > 10 & t <= 11) + (max(0, min((t(t > 10 & t <= 11) - 10), 1)) * num);
@@ -427,6 +456,13 @@ PID.m
 
 ```matlab
 function PID(Kp_s,Ki_s,Kd_s,t,gp,g,H)
+
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
 
 num = 10;
 r = zeros(size(t));  % 初始化为全零
@@ -597,6 +633,13 @@ PID_with_noise.m
 
 ```matlab
 function PID_with_noise(Kp_s,Ki_s,Kd_s,t,gp,g,H)
+
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
 
 % N(s) = 0;  Td(s) = 50/s;
 r = 10 * ones(size(t));  % 初始化为全零

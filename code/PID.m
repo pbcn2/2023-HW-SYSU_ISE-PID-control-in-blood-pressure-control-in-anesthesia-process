@@ -1,5 +1,12 @@
 function PID(Kp_s,Ki_s,Kd_s,t,gp,g,H)
 
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
+
 num = 10;
 r = zeros(size(t));  % 初始化为全零
 r(t > 10 & t <= 11) = r(t > 10 & t <= 11) + (max(0, min((t(t > 10 & t <= 11) - 10), 1)) * num);

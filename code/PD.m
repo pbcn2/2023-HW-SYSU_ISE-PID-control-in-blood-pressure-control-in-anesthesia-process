@@ -1,5 +1,12 @@
 function PD(Kp_s,Ki_s,Kd_s,t,gp,g,H)
 
+%{
+<program>  Copyright (C) <2023>  <Huaqian Chin>
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+%}
+
 % N(s) = 0;  Td(s) = 0;
 num = 10;
 r = zeros(size(t));  % 初始化为全零
