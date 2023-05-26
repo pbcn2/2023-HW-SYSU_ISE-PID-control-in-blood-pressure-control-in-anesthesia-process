@@ -8,38 +8,38 @@ noise = zeros(size(t));  % 创建n序列
 % 创建Td序列
 Td = zeros(size(t));  % 创建Td序列
 
-% %% 
-% figure(1);
-% 
-% gc = 1;
-% fai_r = (gc*gp*g)/(1+H*gc*gp*g);
-% fai_Td = (g)/(1+H*gc*gp*g);
-% fai_n = (H*gc*gp*g)/(1+H*gc*gp*g);
-% output_r = lsim(fai_r, r, t);  % 对应fai_r的输出
-% output_Td = lsim(fai_Td, Td, t);  % 对应fai_Td的输出
-% output_n = lsim(fai_n, noise, t);   % 对应fai_n的输出
-% output = output_r + output_Td + output_n; % 得到总输出
-% 
-% % 计算调节时间
-% final_value = 10;  % 假设最终稳定值为10
-% settling_index = find(output >= 0.98 * final_value & output <= final_value, 1, 'first');
-% settling_time = t(settling_index) - 10;  % 调节时间从t=10开始计算
-% 
-% plot(t, output);  % 画出时域图像
-% 
-% % 添加输入开始的标记
-% hold on;
-% line([10, 10], ylim, 'Color', 'green', 'LineStyle', '--');
-% text(10, min(output), '', 'VerticalAlignment','top', 'HorizontalAlignment','left');
-% 
-% % 添加调节时间标记
-% line([settling_time + 10, settling_time + 10], ylim, 'Color', 'red', 'LineStyle', '--');
-% text(settling_time + 10, min(output), sprintf('t_s = %.2f', settling_time), 'VerticalAlignment','top', 'HorizontalAlignment','right');
-% hold off;
-% 
-% title('Response for row Controller')
-% xlabel('Time (s)')
-% ylabel('Response')
+%% 
+figure(1);
+
+gc = 1;
+fai_r = (gc*gp*g)/(1+H*gc*gp*g);
+fai_Td = (g)/(1+H*gc*gp*g);
+fai_n = (H*gc*gp*g)/(1+H*gc*gp*g);
+output_r = lsim(fai_r, r, t);  % 对应fai_r的输出
+output_Td = lsim(fai_Td, Td, t);  % 对应fai_Td的输出
+output_n = lsim(fai_n, noise, t);   % 对应fai_n的输出
+output = output_r + output_Td + output_n; % 得到总输出
+
+% 计算调节时间
+final_value = 10;  % 假设最终稳定值为10
+settling_index = find(output >= 0.98 * final_value & output <= final_value, 1, 'first');
+settling_time = t(settling_index) - 10;  % 调节时间从t=10开始计算
+
+plot(t, output);  % 画出时域图像
+
+% 添加输入开始的标记
+hold on;
+line([10, 10], ylim, 'Color', 'green', 'LineStyle', '--');
+text(10, min(output), '', 'VerticalAlignment','top', 'HorizontalAlignment','left');
+
+% 添加调节时间标记
+line([settling_time + 10, settling_time + 10], ylim, 'Color', 'red', 'LineStyle', '--');
+text(settling_time + 10, min(output), sprintf('t_s = %.2f', settling_time), 'VerticalAlignment','top', 'HorizontalAlignment','right');
+hold off;
+
+title('Response for row Controller')
+xlabel('Time (s)')
+ylabel('Response')
 
 
 %%
