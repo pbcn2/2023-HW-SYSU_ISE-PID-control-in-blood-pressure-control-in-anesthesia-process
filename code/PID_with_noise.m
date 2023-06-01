@@ -12,10 +12,14 @@ r = 10 * ones(size(t));  % 初始化为全零
 % 创建n序列 
 noise = zeros(size(t));  
 % 创建Td序列
-num = 50;
+% num = 50;
+% Td = zeros(size(t));  % 初始化为全零
+% Td(t > 50 & t <= 51) = Td(t > 50 & t <= 51) + (max(0, min((t(t > 50 & t <= 51) - 50), 1)) * num);
+% Td(t > 51) = num; 
+num = -50;  % 修改num为-50
 Td = zeros(size(t));  % 初始化为全零
 Td(t > 50 & t <= 51) = Td(t > 50 & t <= 51) + (max(0, min((t(t > 50 & t <= 51) - 50), 1)) * num);
-Td(t > 51) = num; 
+Td(t > 51) = num;
 
 %% Kp&Ki不动Kd动
 figure('Position', [10 10 900 900])

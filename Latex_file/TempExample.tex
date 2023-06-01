@@ -229,17 +229,27 @@ $$
 \includegraphics[width=1\linewidth]{./img/None_p1_R.png}
 \end{figure}
 
-取N(s)=0, Td(s)=50/s, R(s)=10/s
+取N(s)=0, Td(s)=-50/s, R(s)=10/s
 
 测试系统在阶跃扰动的情况下的性能，在t=0的时候给予一个R(s) = 10/s的输入，
-在t=50的时候给予一个Td(s) = 50/s的阶跃扰动，观察超调量，作图如下
+在t=50的时候给予一个Td(s) = -50/s的阶跃扰动，观察超调量，作图如下
 
-超调量过大
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/None_p3_Td.png}
+\end{figure}
+
+可以看到，超调量几乎为0，调节时间也比较快，但是稳定性很差，响应范围过大。
+
+为了方便观察，$将Td(s)$取为正向输入的50/s，作图，观察。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{./img/None_p2_Td.png}
 \end{figure}
+
+响应范围过大，接近100\%，无法满足要求。
+需要考虑加入控制器进行调节。
 
 % ==========================================================================================
 \subsubsection{PI控制器}
@@ -427,11 +437,11 @@ $$
 
 % ====================================================
 \subsubsection{阶跃扰动响应下的PID控制器}
-参数：R = 10 (t>10);  N(s) = 0;  Td(s) = 50/s (t>50);
+参数：R = 10 (t>10);  N(s) = 0;  Td(s) = -50/s (t>50);
 
 在这个模块中，将PID控制器接入了系统的Gc(s)的位置
 
-在t = 0的时候系统对R阶跃信号产生响应，当趋于稳定以后，对系统添加一个Td(s) = 50/s的阶跃扰动响应信号
+在t = 0的时候系统对R阶跃信号产生响应，当趋于稳定以后，对系统添加一个Td(s) = -50/s的阶跃扰动响应信号
 观察系统的变化，同时与没有接入PID控制器的信号进行对比
 
 实现了对三个参数 (Kp \& Ki \& Kd) 进行了两组分析
@@ -507,9 +517,10 @@ $$
 没有PID控制器的原系统响应为
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{./img/None_p2_Td.png}
+\includegraphics[width=0.8\linewidth]{./img/None_p3_Td.png}
 \end{figure}
 可以看到，当加入了PID系统以后，整体的超调量有了明显的下降，
+最重要的是响应范围过大的问题有了很大的改善。
 这体现了通过加入PID控制器以后，系统的稳定性大大提高了。
 这对于手术过程中的病人麻醉状态的稳定有着至关重要的作用。
 
@@ -525,6 +536,7 @@ PI/PD/PID 三种控制器的有无扰动两种情况下最
   \captionnamefont{\wuhao\bf\heiti}
   \captiontitlefont{\wuhao\bf\heiti}
   \caption{PID参数对系统的影响} 
+  \resizebox{1\linewidth}{!}{%
   \begin{tabular}{llllll}
       \toprule
       调整方式 & 上升时间 & 超调量 & 稳态误差 & 稳定性 \\ 
@@ -534,7 +546,9 @@ PI/PD/PID 三种控制器的有无扰动两种情况下最
       ↑ Kd & ↓ 小幅减少 & ↓ 减少 & → 变动不大 & ↑ 变好 \\
       \bottomrule
   \end{tabular}
+  }
 \end{table}
+
 
 \subsection{最优参数}
 人工调整有一种作法是先将 Ki 及 Kd 设为零，

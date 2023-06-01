@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.22)  26 MAY 2023 08:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.22)  1 JUN 2023 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1467,10 +1467,15 @@ File: ./img/N.jpg Graphic file (type bmp)
  [3]
 File: ./img/None_p1_R.png Graphic file (type bmp)
 <./img/None_p1_R.png>
+File: ./img/None_p3_Td.png Graphic file (type bmp)
+<./img/None_p3_Td.png>
+
+Missing character: There is no 将 (U+5C06) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
 File: ./img/None_p2_Td.png Graphic file (type bmp)
 <./img/None_p2_Td.png>
 File: ./img/PI/i1.png Graphic file (type bmp)
 <./img/PI/i1.png>
+[4]
 File: ./img/PI/i2.png Graphic file (type bmp)
 <./img/PI/i2.png>
 File: ./img/PI/i3.png Graphic file (type bmp)
@@ -1479,7 +1484,6 @@ File: ./img/PI/i4.png Graphic file (type bmp)
 <./img/PI/i4.png>
 File: ./img/PI/i5.png Graphic file (type bmp)
 <./img/PI/i5.png>
- [4]
 File: ./img/PI/p1.png Graphic file (type bmp)
 <./img/PI/p1.png>
 File: ./img/PI/p2.png Graphic file (type bmp)
@@ -1510,11 +1514,11 @@ File: ./img/PD/d4.png Graphic file (type bmp)
 <./img/PD/d4.png>
 File: ./img/PD/d5.png Graphic file (type bmp)
 <./img/PD/d5.png>
+ [5]
 File: ./img/PID/pi1.png Graphic file (type bmp)
 <./img/PID/pi1.png>
 File: ./img/PID/pi2.png Graphic file (type bmp)
 <./img/PID/pi2.png>
- [5]
 File: ./img/PID/pi3.png Graphic file (type bmp)
 <./img/PID/pi3.png>
 File: ./img/PID/pi4.png Graphic file (type bmp)
@@ -1541,6 +1545,7 @@ File: ./img/PID/id4.png Graphic file (type bmp)
 <./img/PID/id4.png>
 File: ./img/PID/id5.png Graphic file (type bmp)
 <./img/PID/id5.png>
+ [6]
 File: ./img/PID_with_noise/pi1.png Graphic file (type bmp)
 <./img/PID_with_noise/pi1.png>
 File: ./img/PID_with_noise/pi2.png Graphic file (type bmp)
@@ -1549,7 +1554,6 @@ File: ./img/PID_with_noise/pi3.png Graphic file (type bmp)
 <./img/PID_with_noise/pi3.png>
 File: ./img/PID_with_noise/pi4.png Graphic file (type bmp)
 <./img/PID_with_noise/pi4.png>
- [6]
 File: ./img/PID_with_noise/pi5.png Graphic file (type bmp)
 <./img/PID_with_noise/pi5.png>
 File: ./img/PID_with_noise/pd1.png Graphic file (type bmp)
@@ -1572,18 +1576,10 @@ File: ./img/PID_with_noise/id4.png Graphic file (type bmp)
 <./img/PID_with_noise/id4.png>
 File: ./img/PID_with_noise/id5.png Graphic file (type bmp)
 <./img/PID_with_noise/id5.png>
-File: ./img/None_p2_Td.png Graphic file (type bmp)
-<./img/None_p2_Td.png>
-
-Overfull \hbox (43.16537pt too wide) in paragraph at lines 528--537
- [][] 
- []
-
-[7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+File: ./img/None_p3_Td.png Graphic file (type bmp)
+<./img/None_p3_Td.png>
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
 [][]\TU/TimesNewRoman(0)/m/n/10.5 https://github.com/pbcn2/PID-control-in-blood-
  []
 
@@ -1595,12 +1591,12 @@ Package rerunfilecheck Info: File `TempExample.out' has not changed.
 (rerunfilecheck)             Checksum: CC660023111E5898451D5481D5F28431;2457.
  ) 
 Here is how much of TeX's memory you used:
- 39128 strings out of 476683
- 844948 string characters out of 5807575
+ 39136 strings out of 476683
+ 845137 string characters out of 5807575
  1882012 words of memory out of 5000000
- 58619 multiletter control sequences out of 15000+600000
+ 58626 multiletter control sequences out of 15000+600000
  547004 words of font info for 248 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,14n,115p,1253b,915s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,14n,115p,1253b,913s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on TempExample.pdf (8 pages).
